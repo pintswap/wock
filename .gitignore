@@ -1,2 +1,3 @@
 images/generated/*.png
 cache
+node_modules
