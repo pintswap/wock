@@ -1,0 +1,16 @@
+{
+  "name": "wock",
+  "version": "0.1.0",
+  "description": "WOCK NFT",
+  "main": "lib/index.js",
+  "repository": "https://github.com/pintswap/wock",
+  "author": "pintswap",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@uniswap/v3-periphery": "^1.4.3",
+    "ethers": "^6.3.0",
+    "hardhat": "^2.14.0"
+  }
+}
