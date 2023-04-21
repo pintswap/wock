@@ -1,9 +1,13 @@
 'use strict';
 
-const { ethers } = require('hardhat');
+const { ethers, deployments } = require('hardhat');
 
 module.exports = async () => {
   const [ signer ] = await ethers.getSigners();
-  const factory = await ethers.getContractFactory('WOCK', signer);
-  await factory.deploy();
+  await deployments.deploy('WOCK', {
+    contractName: 'WOCK',
+    args: [],
+    from: await signer.getAddress()
+  });
+  console.log('deployed WOCK');
 };
