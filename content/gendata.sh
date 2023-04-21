@@ -3,7 +3,7 @@
 mkdir -p ../images/metadata
 for I in {1..200}
 do
-  export IPFS_CID=$(ipfs add -Q ./generated/${I}.png)
+  export IPFS_CID=QmZGJcSwRfUMBU3UrQKqiocw9GrPfgdfnzLFvywtDdPze1
   export TOKEN_ID=$I
-  cat ./metadata.json.tmpl | envsubst | tee ./metadata/${I}.json
+  cat ./metadata.json.tmpl | envsubst | tee ./metadata/${I}
 done
