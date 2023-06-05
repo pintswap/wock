@@ -8,7 +8,7 @@ contract WOCK is ERC721Permit, Ownable {
   mapping (uint256 => uint256) public nonces;
   function version() public pure returns (string memory) { return "1"; }
   constructor() ERC721Permit("WOCK", "WOCK", "1") Ownable() {
-    _setBaseURI("https://cloudflare-ipfs.com/ipfs/QmdLBfBVVoHU21WC64YsBGhrndVhzvNwcZT4MGucPMPSex/");
+    _setBaseURI("ipfs://bafybeiezpbqq6favps74erwn35ircae2xqqdmczxjs7imosdkn6ahmuxme/");
   }
   function _getAndIncrementNonce(uint256 _tokenId) internal override virtual returns (uint256) {
     uint256 nonce = nonces[_tokenId];

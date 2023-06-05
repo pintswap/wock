@@ -9,5 +9,6 @@ module.exports = async () => {
     args: [],
     from: await signer.getAddress()
   });
+  const wock = await ethers.getContract('WOCK');
   console.log('deployed WOCK');
 };
